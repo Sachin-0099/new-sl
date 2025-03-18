@@ -10,7 +10,7 @@ const SectionCard = ({PhotoData,title,width,Description}) => {
             {title}</h1>
            {
             Description.map((desc,index)=>(
-              <p key={index} className='lg:px-10 lg:mx-10 lg:py-5 py-2 mx-5 md:text-xl text-sm lg:text-2xl font-semibold'>{desc.description}</p>
+              <p key={index} className='lg:px-10 lg:mx-10 lg:py-5 py-2 mx-5 text-gray-500 md:text-xl text-sm lg:text-2xl'>{desc.description}</p>
             ))
            } 
           <div className='h-full w-full flex items-center justify-center'>
@@ -23,9 +23,9 @@ const SectionCard = ({PhotoData,title,width,Description}) => {
             </div>
           </div>
           {Description.map((des,index)=>(
-            <div key={index} className='w-[40%] h-[10%] flex py-5 items-center justify-center'>
-              <img src={des.icon} alt={des.icon} className='w-[10vh]'/>
-              <a href={des.link} className='hover:text-cyan-600 text-cyan-500 px-5 text-3xl'>{des.link}</a>
+            <div key={index} className='w-[40%] h-[10%] flex lg:py-5 py-2 items-center justify-center'>
+              <img src={des.icon} alt={des.icon} className='lg:w-[10vh] md:w-[8vh] w-[5vh]'/>
+              <a href={des.link} className='hover:text-cyan-600 text-cyan-500 px-5 lg:text-3xl md:text-2xl text-md'>{des.link}</a>
             </div>
           ))}
     </div>

@@ -4,7 +4,7 @@ const Experience = ({ExperienceData}) => {
     <>
         <div className=' w-screen flex flex-wrap lg:flex-col md:flex-col sm:flex-row justify-center items-center my-10'>
             {ExperienceData.map((data,index)=>(
-                <div className='h-full w-full flex flex-wrap'>
+                <div key={index} className='h-full w-full flex flex-wrap'>
                     <div className='lg:h-full lg:w-[50%] md:h-full md:w-[55%] w-full h-[40vh]'>
                         <div className='flex flex-wrap items-center justify-center'>
                             <h1 className='lg:text-6xl md:text-3xl mb-2 text-3xl font-semibold text-transparent bg-gradient-to-r from-[#3087D1] via-[#3087D5] to-black bg-clip-text underline underline-offset-8'>{data.title}</h1>
