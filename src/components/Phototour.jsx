@@ -6,7 +6,7 @@ const Phototour = ({Phototour}) => {
     <div className='min-h-[80vh] w-screen flex flex-wrap lg:flex-col md:flex-col sm:flex-row justify-center items-center mt-10'>
         {Phototour.map((data,index)=>(
             <div key={index} className='h-full w-full flex flex-wrap'>
-                <div className='lg:h-full lg:w-[72vh] md:h-full md:w-[50%] w-full h-[40vh]'>
+                <div className='lg:h-full lg:w-[90vh] md:h-full md:w-[50%] w-full h-[40vh]'>
                     <img src={data.src} className='w-full h-full object-cover'/>
                 </div>
                 <div className='lg:h-full lg:w-[50%] md:h-full md:w-[50%] w-full h-[40vh]'>

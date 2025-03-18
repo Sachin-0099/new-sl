@@ -14,12 +14,12 @@ export const PhotoData = [
 ];
 
 export const VideoData = [
-    { src: '/images/phtoSec1.png' },
-    { src: '/images/photoSec2.png' },
-    { src: '/images/photoSec3.png' },
-    { src: '/images/photoSec4.png' },
-    { src: '/images/photoSec5.png' },
-    { src: '/images/photoSec6.png' },
+    { src: '/video/video1.mp4' },
+    { src: '/video/video2.mp4' },
+    { src: '/video/video3.mp4' },
+    { src: '/video/video4.mp4' },
+    { src: '/video/video5.mp4' },
+    { src: '/video/video6.mp4' },
 ];
 
 export const VideoDescription=[
