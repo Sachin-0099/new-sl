@@ -10,7 +10,7 @@ const Header = () => {
             <div className='lg:h-full lg:w-[50%] md:h-full md:w-[50%] w-full h-[20vh]'>
                 <div className='flex flex-wrap items-center justify-center'>
                     <img src={logo} alt="" className='lg:w-[90vh] lg:h-[36vh] md:w-[50%] md:h-[20vh] h-[15vh] w-[30vh] object-cover' />
-                    <p className='lg:text-6xl md:text-3xl mt-2 font-semibold text-3xl text-transparent bg-gradient-to-r from-[#3087D1] via-[#3087D5] to-black bg-clip-text'>Emad Captures</p>
+                    <p className='lg:text-6xl md:text-3xl mt-2 text-transparent font-semibold text-3xl bg-gradient-to-r from-[#3087D1] via-[#3087D5] to-black bg-clip-text hover:underline hover:underline-offset-8 hover:underline-[#3087D1]'>Emad Captures</p>
                 </div>
             </div>
             <div className='lg:h-full bg-blue-500 lg:w-[50%] md:h-full md:w-[50%] w-full h-[35vh]'>

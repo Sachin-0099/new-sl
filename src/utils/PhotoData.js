@@ -22,6 +22,22 @@ export const VideoData = [
     { src: '/images/photoSec6.png' },
 ];
 
+export const VideoDescription=[
+    {
+        icon:'/images/youtubeIcon.png',
+        description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, laboriosam eligendi? Quasi quibusdam aspernatur quos corrupti est praesentium error in suscipit voluptates! Nulla consequatur ex ab nesciunt eligendi illo, delectus omnis, voluptas, labore officiis libero',
+        link:'www.youtube.com'
+    }
+]
+
+export const PhotoDescription=[
+    {
+        icon:'/images/instagram.png',
+        description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, laboriosam eligendi? Quasi quibusdam aspernatur quos corrupti est praesentium error in suscipit voluptates! Nulla consequatur ex ab nesciunt eligendi illo, delectus omnis, voluptas, labore officiis libero',
+        link:'www.instagram.com'
+    }
+]
+
 export const EmadLogo = [
     { src: '/images/emadLogo.png' },
 ]
