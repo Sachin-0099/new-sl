@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderNav from '../components/Navigation/headerNav'
+import HeaderNav from '../components/Navigation/HeaderNav'
 import Header from '../components/Header'
 import About from '../components/About'
 import Section from '../components/Section'
