@@ -27,19 +27,23 @@ const HeaderNav = () => {
     
     <div className="bg-white shadow-md p-2 flex justify-between items-center">
       {/* Logo */}
-      <img src={logo} className="lg:h-20 lg:w-50 md:h-15 md:w-25 object-cover"/>
+      <img src={logo} className="lg:h-20 lg:w-50 md:h-15 md:w-25 h-15 w-30 object-cover"/>
       
       {/* Navigation Links - Hidden on Small Screens */}
-      <div className="hidden md:flex space-x-3">
-        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Acrylic Accessories</a>
-        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Shop</a>
-        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Today's deals</a>
-        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">New Arrivals</a>
-        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Photography & videography</a>
+      <div className="hidden lg:flex items-center space-x-2">
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md">Acrylic Accessories</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md">Shop</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md">Today's deals</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md">New Arrivals</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md">Photography & videography</a>
       </div>
+
+      <button className="lg:hidden p-1 md:text-xl sm:text-sm gap-2 flex bg-gray-300 text-gray-600 rounded-lg" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />} All
+      </button>
       
       {/* Search Bar */}
-      <div className="flex items-center bg-gray-100 p-2 rounded-md lg:w-[25%] md:w-[10%] w-1/3">
+      <div className="flex items-center bg-gray-100 p-2 rounded-md lg:w-[25%] md:w-[30%] w-1/3">
         <Search className="text-gray-500" size={20} />
         <input
           type="text"
@@ -49,10 +53,10 @@ const HeaderNav = () => {
       </div>
       
       {/* Icons */}
-      <div className="hidden md:flex lg:flex items-center space-x-5">
+      <div className="hidden lg:flex items-center space-x-2">
         <a className="flex items-center">
           <User size={20} />
-          <button className="text-sm lg:text-md" onClick={()=>navigate('/signup')}>Sign Up or Sign In</button>
+          <button className="text-md" onClick={()=>navigate('/signup')}>Sign Up or Sign In</button>
         </a>
         <Heart size={20} className="hidden lg:flex"/>
         <ShoppingCart size={20} className="hidden lg:flex" />
@@ -60,14 +64,14 @@ const HeaderNav = () => {
       </div>
       
       {/* Mobile Menu Button */}
-      <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      <button className="lg:hidden p-1 md:text-md text-md flex bg-gray-300 text-gray-600 rounded-lg" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {isMenuOpen ? <X/> : <Menu/>} Categories
       </button>
     </div>
     
     {/* Mobile Dropdown Menu */}
     {isMenuOpen && (
-      <div className="md:hidden bg-white shadow-md p-4 absolute w-full left-0 top-16">
+      <div className="lg:hidden bg-white shadow-md p-4 absolute w-1/2 right-0 top-25">
         <a href="#" className="block py-2 hover:text-gray-600">Arcylic Accessories</a>
         <a href="#" className="block py-2 hover:text-gray-600">Shop</a>
         <a href="#" className="block py-2 hover:text-gray-600">Today's deal</a>
