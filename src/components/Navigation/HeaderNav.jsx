@@ -27,18 +27,19 @@ const HeaderNav = () => {
     
     <div className="bg-white shadow-md p-2 flex justify-between items-center">
       {/* Logo */}
-      <img src={logo} className="h-20 w-50 object-cover"/>
+      <img src={logo} className="lg:h-20 lg:w-50 md:h-15 md:w-25 object-cover"/>
       
       {/* Navigation Links - Hidden on Small Screens */}
-      <div className="hidden md:flex space-x-8">
-        <a href="#" className="hover:text-gray-600">Furniture</a>
-        <a href="#" className="hover:text-gray-600">Household</a>
-        <a href="#" className="hover:text-gray-600">Baby & Kids</a>
-        <a href="#" className="hover:text-gray-600">New Arrivals</a>
+      <div className="hidden md:flex space-x-3">
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Acrylic Accessories</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Shop</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Today's deals</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">New Arrivals</a>
+        <a href="#" className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-sm lg:text-md">Photography & videography</a>
       </div>
       
       {/* Search Bar */}
-      <div className="flex items-center bg-gray-100 p-2 rounded-md w-1/3">
+      <div className="flex items-center bg-gray-100 p-2 rounded-md lg:w-[25%] md:w-[10%] w-1/3">
         <Search className="text-gray-500" size={20} />
         <input
           type="text"
@@ -48,14 +49,14 @@ const HeaderNav = () => {
       </div>
       
       {/* Icons */}
-      <div className="flex items-center space-x-4">
-        <a href="#" className="flex items-center space-x-1">
+      <div className="hidden md:flex lg:flex items-center space-x-5">
+        <a className="flex items-center">
           <User size={20} />
-          <button onClick={()=>navigate('/signup')}>Sign Up or Sign In</button>
+          <button className="text-sm lg:text-md" onClick={()=>navigate('/signup')}>Sign Up or Sign In</button>
         </a>
-        <Heart size={20} />
-        <ShoppingCart size={20} />
-        <Globe size={20} />
+        <Heart size={20} className="hidden lg:flex"/>
+        <ShoppingCart size={20} className="hidden lg:flex" />
+        <Globe size={20} className="hidden lg:flex" />
       </div>
       
       {/* Mobile Menu Button */}
@@ -67,10 +68,12 @@ const HeaderNav = () => {
     {/* Mobile Dropdown Menu */}
     {isMenuOpen && (
       <div className="md:hidden bg-white shadow-md p-4 absolute w-full left-0 top-16">
-        <a href="#" className="block py-2 hover:text-gray-600">Furniture</a>
-        <a href="#" className="block py-2 hover:text-gray-600">Household</a>
-        <a href="#" className="block py-2 hover:text-gray-600">Baby & Kids</a>
+        <a href="#" className="block py-2 hover:text-gray-600">Arcylic Accessories</a>
+        <a href="#" className="block py-2 hover:text-gray-600">Shop</a>
+        <a href="#" className="block py-2 hover:text-gray-600">Today's deal</a>
         <a href="#" className="block py-2 hover:text-gray-600">New Arrivals</a>
+        <a href="#" className="block py-2 hover:text-gray-600">Photography and videography</a>
+        <a href="#" className="block py-2 hover:text-gray-600">Signup/Signin</a>
       </div>
     )}
     </>
