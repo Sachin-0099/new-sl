@@ -1,3 +1,4 @@
+
 export const PhotoData = [
     { src: '/images/phtoSec1.png' },
     { src: '/images/photoSec2.png' },
@@ -12,7 +13,189 @@ export const PhotoData = [
     { src: '/images/photoSec11.png' },
     { src: '/images/photoSec12.png' },
 ];
-
+export const TableData = [
+    {
+      orderId: "ORD001",
+      customer: "John Doe",
+      type: "shipping",
+      status: "pickup",
+      product: "Laptop",
+      totalProducts: 1,
+      date: "2025-03-01"
+    },
+    {
+      orderId: "ORD002",
+      customer: "Jane Smith",
+      type: "pickup",
+      status: "refresh",
+      product: "Smartphone",
+      totalProducts: 2,
+      date: "2025-03-02"
+    },
+    {
+      orderId: "ORD003",
+      customer: "Sam Johnson",
+      type: "shipping",
+      status: "cancelled",
+      product: "Headphones",
+      totalProducts: 1,
+      date: "2025-03-03"
+    },
+    {
+      orderId: "ORD004",
+      customer: "Emily Davis",
+      type: "pickup",
+      status: "pickup",
+      product: "Monitor",
+      totalProducts: 1,
+      date: "2025-03-04"
+    },
+    {
+      orderId: "ORD005",
+      customer: "Michael Brown",
+      type: "shipping",
+      status: "refresh",
+      product: "Keyboard",
+      totalProducts: 3,
+      date: "2025-03-05"
+    },
+    {
+      orderId: "ORD006",
+      customer: "Linda Williams",
+      type: "pickup",
+      status: "cancelled",
+      product: "Mouse",
+      totalProducts: 2,
+      date: "2025-03-06"
+    },
+    {
+      orderId: "ORD007",
+      customer: "David Wilson",
+      type: "shipping",
+      status: "pickup",
+      product: "Tablet",
+      totalProducts: 1,
+      date: "2025-03-07"
+    },
+    {
+      orderId: "ORD008",
+      customer: "Sarah Moore",
+      type: "pickup",
+      status: "refresh",
+      product: "Smartwatch",
+      totalProducts: 2,
+      date: "2025-03-08"
+    },
+    {
+      orderId: "ORD009",
+      customer: "James Taylor",
+      type: "shipping",
+      status: "cancelled",
+      product: "Camera",
+      totalProducts: 1,
+      date: "2025-03-09"
+    },
+    {
+      orderId: "ORD010",
+      customer: "Laura Harris",
+      type: "pickup",
+      status: "pickup",
+      product: "Laptop Bag",
+      totalProducts: 1,
+      date: "2025-03-10"
+    },
+    {
+      orderId: "ORD011",
+      customer: "Robert Martinez",
+      type: "shipping",
+      status: "refresh",
+      product: "Speakers",
+      totalProducts: 4,
+      date: "2025-03-11"
+    },
+    {
+      orderId: "ORD012",
+      customer: "Lisa Clark",
+      type: "pickup",
+      status: "pickup",
+      product: "Phone Case",
+      totalProducts: 3,
+      date: "2025-03-12"
+    },
+    {
+      orderId: "ORD013",
+      customer: "William Lee",
+      type: "shipping",
+      status: "cancelled",
+      product: "Game Console",
+      totalProducts: 1,
+      date: "2025-03-13"
+    },
+    {
+      orderId: "ORD014",
+      customer: "Susan Allen",
+      type: "pickup",
+      status: "refresh",
+      product: "Wireless Charger",
+      totalProducts: 2,
+      date: "2025-03-14"
+    },
+    {
+      orderId: "ORD015",
+      customer: "Joseph King",
+      type: "shipping",
+      status: "pickup",
+      product: "Bluetooth Earphones",
+      totalProducts: 1,
+      date: "2025-03-15"
+    },
+    {
+      orderId: "ORD016",
+      customer: "Megan Scott",
+      type: "pickup",
+      status: "cancelled",
+      product: "Webcam",
+      totalProducts: 1,
+      date: "2025-03-16"
+    },
+    {
+      orderId: "ORD017",
+      customer: "Christopher Green",
+      type: "shipping",
+      status: "refresh",
+      product: "External Hard Drive",
+      totalProducts: 2,
+      date: "2025-03-17"
+    },
+    {
+      orderId: "ORD018",
+      customer: "Jessica Adams",
+      type: "pickup",
+      status: "pickup",
+      product: "Flash Drive",
+      totalProducts: 4,
+      date: "2025-03-18"
+    },
+    {
+      orderId: "ORD019",
+      customer: "Daniel Nelson",
+      type: "shipping",
+      status: "cancelled",
+      product: "Smart TV",
+      totalProducts: 1,
+      date: "2025-03-19"
+    },
+    {
+      orderId: "ORD020",
+      customer: "Patricia Carter",
+      type: "pickup",
+      status: "refresh",
+      product: "VR Headset",
+      totalProducts: 1,
+      date: "2025-03-20"
+    }
+  ];
+  
 export const VideoData = [
     { src: '/video/video1.mp4' },
     { src: '/video/video2.mp4' },
