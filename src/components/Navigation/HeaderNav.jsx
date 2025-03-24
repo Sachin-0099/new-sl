@@ -31,16 +31,16 @@ const HeaderNav = () => {
           <span className="lg:text-sm md:text-xs">Sell With Us</span>
         </div>
       </nav>
+
       <div className="py-3">
         <div className="px-2 flex items-center justify-center">
-
           {/* img */}
-          <div className="w-[35vh] h-20">
-            <img src={logo} className="w-full h-full object-cover"/>
+          <div className="lg:w-[35vh] md:w-[35vh] w-[18vh] h-20">
+            <img src={logo} className="w-full h-full object-contain"/>
           </div>
 
           {/* left-side navigation link */}
-          <div className="w-[50%] md:hidden hidden lg:flex items-center justify-start space-x-7">
+          <div className="w-[54%] md:hidden hidden lg:flex items-center justify-start space-x-7">
             {['Acrylic','Shops','Photography & videography'].map((items,index)=>(
               <>
               <a className="text-xl hover:scale-115 hover:border hover:border-outline-1 hover:border-blue-500 hover:text-blue-500 p-2 transition ease-in-ease-out">
@@ -50,7 +50,7 @@ const HeaderNav = () => {
             ))}
           </div>
 
-          <div className="relative h-10 lg:w-[40%] md:w-[50%] lg:mx-1 md:mx-10">
+          <div className="relative h-10 lg:w-[40%] md:w-[50%] lg:mx-1 md:mx-10 mx-3">
             <input 
             className="h-10 w-[100%] bg-white rounded-md py-5 pl-10 pr-2 outline-none border border-gray-300 border-outline-2 shadow-lg"
             placeholder="What do you want?"
@@ -79,7 +79,65 @@ const HeaderNav = () => {
            <CiHeart size={25} className="flex" />
            <FaShoppingCart size={25} className="flex" />
            <CiGlobe size={25} className="flex" />
-         </div>
+          </div>
+
+          <div>
+            {isMenuOpen && (
+            <div
+              className="lg:hidden md:flex flex fixed inset-0 bg-opacity-50 backdrop-blur-sm z-50"
+              onClick={() => setIsMenuOpen(false)} // Close the menu when clicking outside
+            >
+            <div
+                className="bg-white w-full md:w-2/3 h-full absolute right-0 top-0 p-4 space-y-4"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside sidebar
+            >
+            <a
+            href="#"
+            className="block py-2 hover:text-gray-600"
+            onClick={() => setIsMenuOpen(false)} // Close menu when a link is clicked
+            >
+              Acrylic Accessories
+            </a>
+            <a
+            href="#"
+            className="block py-2 hover:text-gray-600"
+            onClick={() => setIsMenuOpen(false)}
+            >
+            Shop
+            </a>
+            <a
+            href="#"
+            className="block py-2 hover:text-gray-600"
+            onClick={() => setIsMenuOpen(false)}
+            >
+            Today's deal
+            </a>
+            <a
+            href="#"
+            className="block py-2 hover:text-gray-600"
+            onClick={() => setIsMenuOpen(false)}
+            >
+            New Arrivals
+            </a>
+            <a
+              href="#"
+              className="block py-2 hover:text-gray-600"
+              onClick={() => setIsMenuOpen(false)}
+            >
+            Photography and videography
+            </a>
+            <a
+              href="#"
+              className="block py-2 hover:text-gray-600"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Signup/Signin
+            </a>
+          </div>
+        </div>
+    )}
+
+          </div>
         </div>
       </div>
     </>
