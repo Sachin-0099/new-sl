@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { Menu, X, Search, User, ShoppingCart, Globe, Heart } from "lucide-react";
+import { FaSearch, FaUber } from "react-icons/fa";
 import logo from "/images/logo.png";
+import { CiHeart } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
-
+import { FaShoppingCart } from "react-icons/fa";
+import { CiGlobe } from "react-icons/ci";
+import { FaUser } from "react-icons/fa";
+import { MdOutlineMenu } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -26,139 +31,63 @@ const HeaderNav = () => {
           <span className="lg:text-sm md:text-xs">Sell With Us</span>
         </div>
       </nav>
+      <div className="py-3">
+        <div className="px-2 flex items-center justify-center">
 
-      <div className="bg-white shadow-md p-2 flex justify-between items-center">
-        {/* Logo */}
-        <img
-          src={logo}
-          className="lg:h-20 lg:w-50 md:h-15 md:w-25 h-15 w-30 object-cover"
-        />
+          {/* img */}
+          <div className="w-[35vh] h-20">
+            <img src={logo} className="w-full h-full object-cover"/>
+          </div>
 
-        {/* Navigation Links - Hidden on Small Screens */}
-        <div className="hidden lg:flex items-center space-x-2">
-          <a
-            href="#"
-            className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md"
-          >
-            Acrylic Accessories
-          </a>
-          <a
-            href="#"
-            className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md"
-          >
-            Shop
-          </a>
-          <a
-            href="#"
-            className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md"
-          >
-            Today's deals
-          </a>
-          <a
-            href="#"
-            className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md"
-          >
-            New Arrivals
-          </a>
-          <a
-            href="#"
-            className="hover:text-blue-500 p-2 hover:border hover:scale-110 hover:border-outline-1 hover:border-blue-500 transition ease-in-ease-out text-md"
-          >
-            Photography & videography
-          </a>
-        </div>
+          {/* left-side navigation link */}
+          <div className="w-[50%] md:hidden hidden lg:flex items-center justify-start space-x-7">
+            {['Acrylic','Shops','Photography & videography'].map((items,index)=>(
+              <>
+              <a className="text-xl hover:scale-115 hover:border hover:border-outline-1 hover:border-blue-500 hover:text-blue-500 p-2 transition ease-in-ease-out">
+                {items}
+              </a>
+              </>
+            ))}
+          </div>
 
-        {/* Toggle Button for Mobile and Medium Screens */}
-        <button
-          className="lg:hidden md:text-xl text-sm gap-2 flex text-gray-600 rounded-lg"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <div className="relative h-10 lg:w-[40%] md:w-[50%] lg:mx-1 md:mx-10">
+            <input 
+            className="h-10 w-[100%] bg-white rounded-md py-5 pl-10 pr-2 outline-none border border-gray-300 border-outline-2 shadow-lg"
+            placeholder="What do you want?"
+            />
+            <FaSearch 
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" 
+              size={20}
+            />
+          </div>
 
-        {/* Search Bar */}
-        <div className="flex items-center bg-gray-100 p-2 mx-2 rounded-md lg:w-[25%] md:w-[70%] w-[50%]">
-          <Search className="text-gray-500" size={20} />
-          <input
-            type="text"
-            placeholder="What are you looking for?"
-            className="bg-transparent outline-none px-2 w-full"
-          />
-        </div>
+          {/* toggle */}
+          <button
+           className="lg:hidden md:text-xl text-sm gap-2 flex text-gray-600 rounded-lg"
+           onClick={() => setIsMenuOpen(!isMenuOpen)}
+         >
+           {isMenuOpen ? <IoMdClose size={30} /> : <MdOutlineMenu size={30} />}
+         </button>
 
-        {/* Icons */}
-        <div className="hidden lg:flex items-center space-x-2">
-          <a className="flex items-center">
-            <User size={20} />
-            <button className="text-md" onClick={() => navigate("/signup")}>
-              Sign Up or Sign In
-            </button>
-          </a>
-          <Heart size={20} className="hidden lg:flex" />
-          <ShoppingCart size={20} className="hidden lg:flex" />
-          <Globe size={20} className="hidden lg:flex" />
+          <div className="lg:h-10 lg:w-[40%] lg:flex  md:hidden hidden items-center justify-center space-x-5">
+           <a className="flex items-center justify-center p-2">
+             <FaUser size={20} />
+             <button className="ml-2 text-xl">
+               Sign Up or Sign In
+             </button>
+           </a>
+           <CiHeart size={25} className="flex" />
+           <FaShoppingCart size={25} className="flex" />
+           <CiGlobe size={25} className="flex" />
+         </div>
         </div>
       </div>
-
-      {/* Mobile and Medium Screens Sidebar with Blur Effect */}
-      {isMenuOpen && (
-        <div
-          className="lg:hidden md:flex flex fixed inset-0 bg-opacity-50 backdrop-blur-sm z-50"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          <div
-            className="bg-white w-full md:w-2/3 h-full absolute left-0 top-0 p-4 space-y-4"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside sidebar
-          >
-            <a
-              href="#"
-              className="block py-2 hover:text-gray-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Acrylic Accessories
-            </a>
-            <a
-              href="#"
-              className="block py-2 hover:text-gray-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Shop
-            </a>
-            <a
-              href="#"
-              className="block py-2 hover:text-gray-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Today's deal
-            </a>
-            <a
-              href="#"
-              className="block py-2 hover:text-gray-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              New Arrivals
-            </a>
-            <a
-              href="#"
-              className="block py-2 hover:text-gray-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Photography and videography
-            </a>
-            <a
-              href="#"
-              className="block py-2 hover:text-gray-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Signup/Signin
-            </a>
-          </div>
-        </div>
-      )}
     </>
   );
 };
 
 export default HeaderNav;
+
+
 
 
