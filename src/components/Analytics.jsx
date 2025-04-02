@@ -1,5 +1,7 @@
 import React from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from "recharts";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const data = [
   { name: "Jan", sales: 400, revenue: 2400 },
@@ -19,8 +21,19 @@ const pieData = [
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const Analytics = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
+      {/* Navigation Button */}
+      <button
+        onClick={() => navigate('/')}
+        className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition flex items-center space-x-2 mb-6"
+      >
+        <ArrowLeft size={20} />
+        <span>Back</span>
+      </button>
+      
       <h2 className="text-3xl font-bold text-gray-800 mb-6">Analytics Overview</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Sales Bar Chart */}

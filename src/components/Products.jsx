@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteProduct } from "../redux/slices/productSlices.jsx";
 import { useNavigate } from "react-router-dom";
-import { Plus } from "lucide-react";
+import { Plus, ArrowLeft, Home } from "lucide-react";
 
 const Products = () => {
   const products = useSelector((state) => state.products);
@@ -11,6 +11,22 @@ const Products = () => {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen relative">
+      {/* Navigation Buttons */}
+      <div className="flex justify-between items-center mb-6">
+        <div className="flex space-x-4">
+          <button
+            onClick={() => navigate('/')}
+            className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition flex items-center space-x-2"
+          >
+            <ArrowLeft size={20} />
+            <span>Back</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Page Header */}
+      <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Products</h1>
+
       {/* Floating Add Button */}
       <button
         onClick={() => navigate("/formAdd")}
@@ -19,15 +35,10 @@ const Products = () => {
         <Plus size={24} />
       </button>
 
-      {/* Page Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">Our Products</h1>
-      </div>
-
       {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md-grid-cols-3 lg:grid-cols-4 gap-6">
         {products.length === 0 ? (
-          <p className="text-gray-500 text-lg">No products available. Add one!</p>
+          <p className="text-gray-500 text-lg text-center">No products available. Add one!</p>
         ) : (
           products.map((product) => (
             <div

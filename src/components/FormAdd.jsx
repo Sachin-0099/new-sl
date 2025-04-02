@@ -32,10 +32,10 @@ const FormAdd = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative p-8 bg-gray-50 min-h-screen flex items-center justify-center">
       <button
         onClick={() => setCartOpen(!cartOpen)}
-        className="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
+        className="absolute top-4 right-4 p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
       >
         <ShoppingCart size={24} />
       </button>
@@ -64,13 +64,13 @@ const FormAdd = () => {
           )}
         </div>
       )}
-      <form onSubmit={handleSubmit} className="mb-6 p-6 bg-white shadow-md rounded-lg max-w-lg mx-auto border border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Add New Products</h2>
-        <div className="grid grid-cols-1 gap-4 mb-4 p-4 border rounded-lg bg-gray-50">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white shadow-lg rounded-lg p-8 border border-gray-200">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Add New Products</h2>
+        <div className="grid grid-cols-1 gap-5 mb-6">
           <input
             type="text"
             placeholder="Product Title"
-            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={currentProduct.title}
             onChange={(e) => handleChange("title", e.target.value)}
             required
@@ -78,7 +78,7 @@ const FormAdd = () => {
           <input
             type="number"
             placeholder="Price"
-            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={currentProduct.price}
             onChange={(e) => handleChange("price", e.target.value)}
             required
@@ -86,13 +86,13 @@ const FormAdd = () => {
           <input
             type="text"
             placeholder="Image URL"
-            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={currentProduct.imageUrl}
             onChange={(e) => handleChange("imageUrl", e.target.value)}
           />
           <input
             type="date"
-            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={currentProduct.date}
             onChange={(e) => handleChange("date", e.target.value)}
           />
@@ -106,7 +106,7 @@ const FormAdd = () => {
             <span className="text-gray-700">Delivered</span>
           </label>
         </div>
-        <button type="button" onClick={addToCart} className="w-full mb-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">
+        <button type="button" onClick={addToCart} className="w-full mb-4 px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">
           Add to Cart
         </button>
         <button type="submit" className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
@@ -118,6 +118,7 @@ const FormAdd = () => {
 };
 
 export default FormAdd;
+
 
 
 
